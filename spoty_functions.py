@@ -12,6 +12,7 @@ def gesture(message):
     songName = message
     return songName
 
+
 def compute_energy(songPath):
     song_signal, sampleRate = librosa.load(songPath) #load song
     #print(sampleRate)
