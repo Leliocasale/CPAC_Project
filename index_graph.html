@@ -5,11 +5,35 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Flow Fields</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_graph.css">
     </head>
     <body>
+        <button id="play">Play</button>
         <canvas id="canvas1"></canvas>
+        <audio id="player" src="song.mp3"></audio>
+       <!--<script>
+           fetch('energy.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Dati di energia istantanea:', data);
+            const energies = data;
+        })
+        .catch(error => console.error('Errore nel recupero dei dati di energia:', error));
+            //var downloadUrl = "{{ download_url }}";
+        </script>-->
         
-        <script src="script.js"></script>
+       
+        <script src="script_graph.js"></script>
+        <script src="data.js"></script>
+        <script>
+            const {values} = data;
+            
+            values.forEach(value => {
+              const p = document.createElement('p');
+              p.textContent = value;
+              document.body.appendChild(p);
+              console.log(p);
+            });
+        </script>
     </body>
 </html>
