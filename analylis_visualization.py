@@ -6,6 +6,7 @@ from tensorflow.keras.models import load_model
 from utils import mediapipe_detection, draw_styled_landmarks, extract_keypoints
 
 
+
 from spoty_main import spotify_search
 
 client_id = "b3a47786876e4b3caf05c32b0bf2feea"
